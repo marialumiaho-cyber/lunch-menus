@@ -19,72 +19,72 @@
         "Lapset 1–12 vuotta: 1 € / ikävuosi"
       ],
       "common_items": [
-        "Rapea vihersalaatti, vinaigrettea ja talon salaattikastiketta (VGN,G)",
+        "Rapea vihersalaatti, vinaigrettea ja talon salaattikastiketta (VGN, G)",
         "Pesto rosso-pastasalaatti (VGN)",
-        "Sydänsalaattia ja raejuustoa (L,G)",
-        "Coleslaw (VGN,G)",
+        "Sydänsalaattia ja raejuustoa (L, G)",
+        "Coleslaw (VGN, G)",
         "Kartanon leipää, voita, levitettä ja hummusta",
-        "Kahvi ja tee, päivän makea",
+        "Kahvi ja tee, lisäksi päivän makea",
         "Torstaisin aina pannukakkua, hilloa ja kermavaahtoa"
       ],
       "daily_menus": {
         "1": {
           "soups": [
-            "Tomaatti-vuohenjuustokeitto (L,G)"
+            "Tomaatti-vuohenjuustokeitto (L, G)"
           ],
           "mains": [
             "Pannupihvit sinappi-kermakastikkeessa (L)",
-            "Mäiskyperunat (VGN,G)"
+            "Mäiskyperunat (VGN, G)"
           ],
           "vegan": [
-            "Tofu-kasviswokki (VGN,G)"
+            "Tofu-kasviswokki (VGN, G)"
           ]
         },
         "2": {
           "soups": [
-            "Kartanon kermainen lohikeitto (L,G)"
+            "Kartanon kermainen lohikeitto (L, G)"
           ],
           "mains": [
-            "Aasialainen kanawokki (M,G)",
-            "Nuudelit (VGN,GP)"
+            "Aasialainen kanawokki (M, G)",
+            "Nuudelit (VGN, GP)"
           ],
           "vegan": [
-            "Tofu-kasviswokki (VGN,G)"
+            "Tofu-kasviswokki (VGN, G)"
           ]
         },
         "3": {
           "soups": [
-            "Palsternakkakeitto (VGN,G)"
+            "Palsternakkakeitto (VGN, G)"
           ],
           "mains": [
             "Jauheliha-mozzarellalasagne (L)"
           ],
           "vegan": [
-            "Tofu-kasviswokki (VGN,G)"
+            "Tofu-kasviswokki (VGN, G)"
           ]
         },
         "4": {
           "soups": [
-            "Hernekeitto (M,G) (vegaaninen pyydettäessä)"
+            "Hernekeitto (M, G) (vegaaninen pyydettäessä)"
           ],
           "mains": [
-            "Teriyakilohta (M,G)",
-            "Basmatiriisi (VGN,G)"
+            "Teriyakilohta (M, G)",
+            "Basmatiriisi (VGN, G)"
           ],
           "vegan": [
-            "Melanzane (VGN,G)"
+            "Melanzane (VGN, G)"
           ]
         },
         "5": {
           "soups": [
-            "Kermainen sienikeitto (L,G)"
+            "Kermainen sienikeitto (L, G)"
           ],
           "mains": [
-            "Porsaan leikkeet, maustevoi (L,G)",
-            "Annanperunat (M,G)"
+            "Porsaan leikkeet, maustevoi (L, G)",
+            "Annanperunat (M, G)"
           ],
           "vegan": [
-            "Melanzane (VGN,G)"
+            "Melanzane (VGN, G)"
           ]
         }
       }
