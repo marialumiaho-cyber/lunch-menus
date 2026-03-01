@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lounasdashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0e0c;
+    --surface: #1a1814;
+    --card: #211f1b;
+    --border: #2e2b24;
+    --accent: #c9a84c;
+    --accent-dim: #8a6e2f;
+    --text: #ede9df;
+    --text-muted: #8a8070;
+    --text-dim: #5a5448;
+    --green: #6a9e6b;
+    --red: #c07060;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  .grain {
+    position: fixed; inset: 0; pointer-events: none; z-index: 100;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 200px;
+  }
+
+  header {
+    padding: 2.5rem 3rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand { display: flex; flex-direction: column; gap: 0.2rem; }
+
+  .brand-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .week-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  .week-label strong { color: var(--accent); font-weight: 500; }
+
+  nav {
+    padding: 1.5rem 3rem;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar { display: none; }
+
+  .day-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .day-btn:hover { border-color: var(--accent-dim); color: var(--text); }
+
+  .day-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0f0e0c;
+    font-weight: 600;
+  }
+
+  .day-btn.is-today::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .main { padding: 0 3rem 3rem; }
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .restaurant-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s;
+  }
+
+  .restaurant-card:hover { border-color: var(--accent-dim); }
+
+  .card-header {
+    padding: 1.2rem 1.4rem 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .restaurant-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .restaurant-meta { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+  .price-badge {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-body { padding: 1.2rem 1.4rem; flex: 1; }
+
+  .menu-section { margin-bottom: 1.2rem; }
+  .menu-section:last-child { margin-bottom: 0; }
+
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .menu-item {
+    font-size: 0.8rem;
+    color: var(--text);
+    line-height: 1.5;
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .menu-item::before { content: '·'; color: var(--accent-dim); flex-shrink: 0; }
+
+  .tags { font-size: 0.65rem; color: var(--text-dim); margin-left: 0.3rem; font-style: italic; }
+
+  .vegan-tag {
+    display: inline-block;
+    background: rgba(106,158,107,0.15);
+    color: var(--green);
+    font-size: 0.58rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+  }
+
+  .card-footer {
+    padding: 0.8rem 1.4rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hours { font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; }
+
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+
+  .link { font-size: 0.7rem; color: var(--accent-dim); text-decoration: none; transition: color 0.2s; }
+  .link:hover { color: var(--accent); }
+
+  .day-panel { display: none; }
+  .day-panel.active { display: block; }
+
+  .panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .panel-title strong { color: var(--text); font-weight: 700; }
+
+  /* Error card */
+  .error-card {
+    background: var(--card);
+    border: 1px solid var(--red);
+    border-radius: 4px;
+    padding: 1.5rem;
+    color: var(--red);
+    font-size: 0.8rem;
+    grid-column: 1 / -1;
+  }
+
+  /* Loading / states */
+  .state-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
+  .spinner {
+    width: 28px; height: 28px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .stale-notice {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    header, nav, .main { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .brand-title { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <div class="brand">
+    <span class="brand-label">Lähiravintolat</span>
+    <h1 class="brand-title">Lounasdashboard</h1>
+  </div>
+  <div class="week-label" id="weekLabel">Ladataan...</div>
+</header>
+
+<nav id="dayNav"></nav>
+
+<div class="main" id="mainContent">
+  <div class="state-screen"><div class="spinner"></div>Haetaan menuita...</div>
+</div>
+
+<script>
+const DAYS_FI  = ['Sunnuntai','Maanantai','Tiistai','Keskiviikko','Torstai','Perjantai','Lauantai'];
+const WEEKDAYS = [1,2,3,4,5];
+
+// ── Render helpers ────────────────────────────────────────────────────────────
+
+function renderItems(arr) {
+  if (!arr || arr.length === 0) return '';
+  return arr.map(i => {
+    const isVegan = /VGN/i.test(i);
+    const tagsMatch = i.match(/\(([A-Z,\s]+)\)/gi);
+    const tags = tagsMatch ? tagsMatch.map(t => t.replace(/[()]/g,'')).join(', ') : '';
+    const clean = i.replace(/\s*\([A-Z,\s]+\)\s*/gi, ' ').trim();
+    return `<div class="menu-item"><span>${clean}${isVegan ? '<span class="vegan-tag">VGN</span>' : ''}<span class="tags">${tags}</span></span></div>`;
+  }).join('');
+}
+
+function renderSection(label, items) {
+  if (!items || items.length === 0) return '';
+  return `<div class="menu-section"><div class="section-label">${label}</div>${renderItems(items)}</div>`;
+}
+
+function renderCard(restaurant, dayKey) {
+  const menu = restaurant.daily_menus?.[dayKey] || restaurant.daily_menus?.[String(dayKey)];
+
+  const headerHtml = `
+    <div class="card-header">
+      <div>
+        <div class="restaurant-name">${restaurant.name}</div>
+        <div class="restaurant-meta">${restaurant.address}</div>
+      </div>
+      ${restaurant.prices?.[0] ? `<div class="price-badge">${restaurant.prices[0]}</div>` : ''}
+    </div>`;
+
+  const footerHtml = `
+    <div class="card-footer">
+      <div class="hours"><div class="dot"></div>${restaurant.hours}</div>
+      <a href="${restaurant.url}" target="_blank" class="link">Avaa sivusto ↗</a>
+    </div>`;
+
+  if (restaurant.error) {
+    return `<div class="error-card">⚠ ${restaurant.name}: ${restaurant.error}</div>`;
+  }
+
+  if (!menu) {
+    return `<div class="restaurant-card">${headerHtml}
+      <div class="card-body" style="color:var(--text-dim);font-size:0.8rem;padding:1.5rem 1.4rem">Ei lounasta tänään.</div>
+      ${footerHtml}</div>`;
+  }
+
+  const body = [
+    renderSection('Salaattipöytä', restaurant.common_items),
+    renderSection('Keitto', menu.soups),
+    renderSection('Lämmin ruoka', menu.mains),
+    renderSection('Vegaaninen vaihtoehto', menu.vegan),
+  ].join('');
+
+  return `<div class="restaurant-card">${headerHtml}<div class="card-body">${body}</div>${footerHtml}</div>`;
+}
+
+// ── Day switching ─────────────────────────────────────────────────────────────
+
+function selectDay(dow) {
+  document.querySelectorAll('.day-btn').forEach(b =>
+    b.classList.toggle('active', +b.dataset.day === dow));
+  document.querySelectorAll('.day-panel').forEach(p =>
+    p.classList.toggle('active', p.id === `panel-${dow}`));
+}
+
+// ── Build UI from data ────────────────────────────────────────────────────────
+
+function buildDashboard(data) {
+  const today    = new Date();
+  const todayDow = today.getDay();
+  const activeDay = WEEKDAYS.includes(todayDow) ? todayDow : 1;
+
+  // Week label
+  const scraped = data.scraped_at ? ` · päivitetty ${data.scraped_at}` : '';
+  document.getElementById('weekLabel').innerHTML =
+    `Viikko <strong>${data.week_label || '—'}</strong><br>` +
+    `<span style="font-size:0.65rem;color:var(--text-dim)">${scraped}</span>`;
+
+  // Nav
+  const nav = document.getElementById('dayNav');
+  nav.innerHTML = '';
+  WEEKDAYS.forEach(dow => {
+    const btn = document.createElement('button');
+    btn.className = 'day-btn' +
+      (dow === todayDow ? ' is-today' : '') +
+      (dow === activeDay ? ' active' : '');
+    btn.textContent = DAYS_FI[dow];
+    btn.dataset.day = dow;
+    btn.addEventListener('click', () => selectDay(+btn.dataset.day));
+    nav.appendChild(btn);
+  });
+
+  // Panels
+  const main = document.getElementById('mainContent');
+  main.innerHTML = '';
+
+  WEEKDAYS.forEach(dow => {
+    const panel = document.createElement('div');
+    panel.className = 'day-panel' + (dow === activeDay ? ' active' : '');
+    panel.id = `panel-${dow}`;
+
+    const isToday = dow === todayDow;
+    const grid = (data.restaurants || []).map(r => renderCard(r, String(dow))).join('');
+
+    panel.innerHTML = `
+      <div class="panel-title">${isToday ? '<strong>Tänään</strong> — ' : ''}${DAYS_FI[dow]}</div>
+      <div class="restaurant-grid">${grid}</div>`;
+    main.appendChild(panel);
+  });
+}
+
+// ── Load menus.json ───────────────────────────────────────────────────────────
+
+async function loadMenus() {
+  try {
+    const res = await fetch('menus.json?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    buildDashboard(data);
+  } catch (err) {
+    document.getElementById('mainContent').innerHTML = `
+      <div class="state-screen">
+        <div style="color:var(--red);font-size:2rem">✕</div>
+        <div>Menuja ei voitu ladata.<br><span style="font-size:0.75rem;color:var(--text-dim)">${err.message}</span></div>
+      </div>`;
+    console.error('Failed to load menus.json:', err);
+  }
+}
+
+loadMenus();
+</script>
+</body>
+</html>
