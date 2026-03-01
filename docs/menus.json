@@ -24,8 +24,8 @@
         "Sydänsalaattia ja raejuustoa (L,G)",
         "Coleslaw (VGN,G)",
         "Kartanon leipää, voita, levitettä ja hummusta",
-        "Kahvi ja tee",
-        "Päivän makea"
+        "Kahvi ja tee, päivän makea",
+        "Torstaisin aina pannukakkua, hilloa ja kermavaahtoa"
       ],
       "daily_menus": {
         "1": {
@@ -69,8 +69,7 @@
           ],
           "mains": [
             "Teriyakilohta (M,G)",
-            "Basmatiriisi (VGN,G)",
-            "Pannukakkua, hilloa ja kermavaahtoa"
+            "Basmatiriisi (VGN,G)"
           ],
           "vegan": [
             "Melanzane (VGN,G)"
