@@ -4,20 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lounasdashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f0e0c;
-    --surface: #1a1814;
-    --card: #211f1b;
-    --border: #2e2b24;
-    --accent: #c9a84c;
-    --accent-dim: #8a6e2f;
-    --text: #ede9df;
-    --text-muted: #8a8070;
-    --text-dim: #5a5448;
-    --green: #6a9e6b;
-    --red: #c07060;
+    --bg: #f0f4f8;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: #e4eaf0;
+    --accent: #00bcd4;
+    --accent-dark: #0097a7;
+    --accent-light: #e0f7fa;
+    --text: #2d3748;
+    --text-muted: #718096;
+    --text-dim: #a0aec0;
+    --green: #38a169;
+    --green-light: #f0fff4;
+    --red: #e53e3e;
+    --shadow: 0 2px 12px rgba(0,0,0,0.07);
+    --shadow-hover: 0 6px 24px rgba(0,188,212,0.13);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,56 +29,67 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     min-height: 100vh;
   }
 
-  .grain {
-    position: fixed; inset: 0; pointer-events: none; z-index: 100;
-    opacity: 0.03;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    background-size: 200px;
-  }
-
+  /* ── Header ── */
   header {
-    padding: 2.5rem 3rem 1.5rem;
+    background: var(--surface);
+    padding: 1.25rem 2.5rem;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 0 var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 
-  .brand { display: flex; flex-direction: column; gap: 0.2rem; }
+  .brand { display: flex; align-items: center; gap: 0.75rem; }
 
-  .brand-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
+  .brand-icon {
+    width: 38px; height: 38px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
   }
 
   .brand-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text);
-    line-height: 1;
+    letter-spacing: -0.02em;
   }
 
-  .week-label {
-    font-size: 0.75rem;
+  .brand-sub {
+    font-size: 0.7rem;
     color: var(--text-muted);
-    text-align: right;
-    line-height: 1.8;
+    font-weight: 400;
+    margin-top: 0.05rem;
   }
 
-  .week-label strong { color: var(--accent); font-weight: 500; }
+  .week-badge {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
 
+  /* ── Day nav ── */
   nav {
-    padding: 1.5rem 3rem;
+    background: var(--surface);
+    padding: 0 2.5rem;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border);
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -83,64 +98,122 @@
 
   .day-btn {
     background: none;
-    border: 1px solid var(--border);
+    border: none;
+    border-bottom: 3px solid transparent;
     color: var(--text-muted);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.6rem 1.4rem;
-    border-radius: 2px;
+    padding: 0.9rem 1.1rem 0.75rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.18s ease;
     white-space: nowrap;
     flex-shrink: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: -1px;
   }
 
-  .day-btn:hover { border-color: var(--accent-dim); color: var(--text); }
-
-  .day-btn.active {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #0f0e0c;
+  .day-btn .day-name {
+    font-size: 0.65rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
-  .day-btn.is-today::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px; height: 4px;
+  .day-btn .day-date {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text);
+    width: 28px; height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    background: var(--accent);
+    transition: all 0.18s;
   }
 
-  .main { padding: 0 3rem 3rem; }
+  .day-btn:hover { border-bottom-color: var(--accent-light); }
+  .day-btn:hover .day-name { color: var(--accent); }
+  .day-btn:hover .day-date { color: var(--accent); }
+
+  .day-btn.active { border-bottom-color: var(--accent); }
+  .day-btn.active .day-name { color: var(--accent); }
+  .day-btn.active .day-date { color: var(--accent-dark); }
+
+  .day-btn.is-today .day-date {
+    background: var(--accent);
+    color: #fff !important;
+  }
+
+  /* ── Main content ── */
+  .main {
+    padding: 2rem 2.5rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .panel-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .panel-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .panel-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .today-pill {
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+  }
 
   .restaurant-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 1.5rem;
   }
 
+  /* ── Cards ── */
   .restaurant-card {
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: border-color 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s;
   }
 
-  .restaurant-card:hover { border-color: var(--accent-dim); }
+  .restaurant-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
 
   .card-header {
-    padding: 1.2rem 1.4rem 1rem;
+    padding: 1.25rem 1.5rem 1rem;
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: flex-start;
@@ -149,38 +222,46 @@
   }
 
   .restaurant-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--text);
-    line-height: 1.2;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
   }
 
-  .restaurant-meta { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem; }
+  .restaurant-meta {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .restaurant-meta::before { content: '📍'; font-size: 0.6rem; }
 
   .price-badge {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 0.3rem 0.7rem;
-    border-radius: 2px;
-    font-size: 0.75rem;
-    color: var(--accent);
-    font-weight: 500;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
-  .card-body { padding: 1.2rem 1.4rem; flex: 1; }
+  .card-body { padding: 1.1rem 1.5rem; flex: 1; }
 
-  .menu-section { margin-bottom: 1.2rem; }
+  .menu-section { margin-bottom: 1.1rem; }
   .menu-section:last-child { margin-bottom: 0; }
 
   .section-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--accent-dim);
-    font-weight: 600;
+    color: var(--text-dim);
+    font-weight: 700;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -190,74 +271,88 @@
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
   .menu-item {
-    font-size: 0.8rem;
+    font-size: 0.79rem;
     color: var(--text);
-    line-height: 1.5;
-    padding: 0.25rem 0;
+    line-height: 1.55;
+    padding: 0.2rem 0;
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .menu-item::before { content: '·'; color: var(--accent-dim); flex-shrink: 0; }
+  .menu-item::before {
+    content: '•';
+    color: var(--accent);
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+  }
 
-  .tags { font-size: 0.65rem; color: var(--text-dim); margin-left: 0.3rem; font-style: italic; }
+  .tags { font-size: 0.62rem; color: var(--text-dim); margin-left: 0.25rem; font-style: italic; }
 
   .vegan-tag {
     display: inline-block;
-    background: rgba(106,158,107,0.15);
+    background: var(--green-light);
     color: var(--green);
-    font-size: 0.58rem;
-    padding: 0.1rem 0.3rem;
-    border-radius: 2px;
+    font-size: 0.55rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
     font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     margin-left: 0.3rem;
     vertical-align: middle;
   }
 
   .card-footer {
-    padding: 0.8rem 1.4rem;
+    padding: 0.8rem 1.5rem;
     border-top: 1px solid var(--border);
+    background: #fafcff;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .hours { font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; }
+  .hours {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 500;
+  }
 
-  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 2px var(--green-light);
+  }
 
-  .link { font-size: 0.7rem; color: var(--accent-dim); text-decoration: none; transition: color 0.2s; }
-  .link:hover { color: var(--accent); }
+  .link {
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.15s;
+  }
 
+  .link:hover { color: var(--accent-dark); }
+
+  /* ── States ── */
   .day-panel { display: none; }
   .day-panel.active { display: block; }
 
-  .panel-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    padding-top: 0.5rem;
-  }
-
-  .panel-title strong { color: var(--text); font-weight: 700; }
-
-  /* Error card */
   .error-card {
-    background: var(--card);
-    border: 1px solid var(--red);
-    border-radius: 4px;
+    background: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-radius: 14px;
     padding: 1.5rem;
     color: var(--red);
     font-size: 0.8rem;
     grid-column: 1 / -1;
   }
 
-  /* Loading / states */
   .state-screen {
     display: flex;
     flex-direction: column;
@@ -267,12 +362,11 @@
     gap: 1rem;
     color: var(--text-muted);
     font-size: 0.85rem;
-    letter-spacing: 0.08em;
   }
 
   .spinner {
     width: 28px; height: 28px;
-    border: 2px solid var(--border);
+    border: 3px solid var(--border);
     border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -280,29 +374,24 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  .stale-notice {
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-  }
-
-  @media (max-width: 600px) {
-    header, nav, .main { padding-left: 1.25rem; padding-right: 1.25rem; }
-    .brand-title { font-size: 1.5rem; }
+  @media (max-width: 640px) {
+    header, nav { padding-left: 1rem; padding-right: 1rem; }
+    .main { padding: 1.25rem 1rem 2rem; }
+    .brand-title { font-size: 1rem; }
   }
 </style>
 </head>
 <body>
-<div class="grain"></div>
 
 <header>
   <div class="brand">
-    <span class="brand-label">Lähiravintolat</span>
-    <h1 class="brand-title">Lounasdashboard</h1>
+    <div class="brand-icon">🍽️</div>
+    <div>
+      <div class="brand-title">Lounasdashboard</div>
+      <div class="brand-sub">Lähiravintolat · Helsinki</div>
+    </div>
   </div>
-  <div class="week-label" id="weekLabel">Ladataan...</div>
+  <div class="week-badge" id="weekLabel">Ladataan...</div>
 </header>
 
 <nav id="dayNav"></nav>
@@ -312,8 +401,24 @@
 </div>
 
 <script>
-const DAYS_FI  = ['Sunnuntai','Maanantai','Tiistai','Keskiviikko','Torstai','Perjantai','Lauantai'];
-const WEEKDAYS = [1,2,3,4,5];
+const DAYS_FI   = ['Sunnuntai','Maanantai','Tiistai','Keskiviikko','Torstai','Perjantai','Lauantai'];
+const DAYS_SHORT = ['Su','Ma','Ti','Ke','To','Pe','La'];
+const WEEKDAYS  = [1,2,3,4,5];
+
+function getMondayOfWeek(date) {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  d.setDate(diff);
+  return d;
+}
+
+function getDateForDow(dow) {
+  const monday = getMondayOfWeek(new Date());
+  const d = new Date(monday);
+  d.setDate(monday.getDate() + (dow - 1));
+  return d;
+}
 
 // ── Render helpers ────────────────────────────────────────────────────────────
 
@@ -351,15 +456,13 @@ function renderCard(restaurant, dayKey) {
       <a href="${restaurant.url}" target="_blank" class="link">Avaa sivusto ↗</a>
     </div>`;
 
-  if (restaurant.error) {
+  if (restaurant.error)
     return `<div class="error-card">⚠ ${restaurant.name}: ${restaurant.error}</div>`;
-  }
 
-  if (!menu) {
+  if (!menu)
     return `<div class="restaurant-card">${headerHtml}
-      <div class="card-body" style="color:var(--text-dim);font-size:0.8rem;padding:1.5rem 1.4rem">Ei lounasta tänään.</div>
+      <div class="card-body" style="color:var(--text-dim);font-size:0.8rem;padding:1.5rem">Ei lounasta tänään.</div>
       ${footerHtml}</div>`;
-  }
 
   const body = [
     renderSection('Salaattipöytä', restaurant.common_items),
@@ -380,29 +483,25 @@ function selectDay(dow) {
     p.classList.toggle('active', p.id === `panel-${dow}`));
 }
 
-// ── Build UI from data ────────────────────────────────────────────────────────
+// ── Build UI ──────────────────────────────────────────────────────────────────
 
 function buildDashboard(data) {
   const today    = new Date();
   const todayDow = today.getDay();
   const activeDay = WEEKDAYS.includes(todayDow) ? todayDow : 1;
 
-  // Week label
-  const scraped = data.scraped_at ? ` · päivitetty ${data.scraped_at}` : '';
-  document.getElementById('weekLabel').innerHTML =
-    `Viikko <strong>${data.week_label || '—'}</strong><br>` +
-    `<span style="font-size:0.65rem;color:var(--text-dim)">${scraped}</span>`;
+  document.getElementById('weekLabel').textContent = `Viikko ${data.week_label || '—'}`;
 
-  // Nav
+  // Nav with day name + date number
   const nav = document.getElementById('dayNav');
   nav.innerHTML = '';
   WEEKDAYS.forEach(dow => {
+    const d = getDateForDow(dow);
+    const isToday = dow === todayDow;
     const btn = document.createElement('button');
-    btn.className = 'day-btn' +
-      (dow === todayDow ? ' is-today' : '') +
-      (dow === activeDay ? ' active' : '');
-    btn.textContent = DAYS_FI[dow];
+    btn.className = 'day-btn' + (isToday ? ' is-today' : '') + (dow === activeDay ? ' active' : '');
     btn.dataset.day = dow;
+    btn.innerHTML = `<span class="day-name">${DAYS_SHORT[dow]}</span><span class="day-date">${d.getDate()}</span>`;
     btn.addEventListener('click', () => selectDay(+btn.dataset.day));
     nav.appendChild(btn);
   });
@@ -410,23 +509,30 @@ function buildDashboard(data) {
   // Panels
   const main = document.getElementById('mainContent');
   main.innerHTML = '';
-
   WEEKDAYS.forEach(dow => {
     const panel = document.createElement('div');
     panel.className = 'day-panel' + (dow === activeDay ? ' active' : '');
     panel.id = `panel-${dow}`;
 
+    const d = getDateForDow(dow);
+    const dateStr = d.toLocaleDateString('fi-FI', { day: 'numeric', month: 'long', year: 'numeric' });
     const isToday = dow === todayDow;
     const grid = (data.restaurants || []).map(r => renderCard(r, String(dow))).join('');
 
     panel.innerHTML = `
-      <div class="panel-title">${isToday ? '<strong>Tänään</strong> — ' : ''}${DAYS_FI[dow]}</div>
+      <div class="panel-header">
+        <div class="panel-title">
+          ${isToday ? '<span class="today-pill">Tänään</span>' : ''}
+          ${DAYS_FI[dow]}
+        </div>
+        <div class="panel-subtitle">${dateStr}</div>
+      </div>
       <div class="restaurant-grid">${grid}</div>`;
     main.appendChild(panel);
   });
 }
 
-// ── Load menus.json ───────────────────────────────────────────────────────────
+// ── Load data ─────────────────────────────────────────────────────────────────
 
 async function loadMenus() {
   try {
@@ -437,10 +543,9 @@ async function loadMenus() {
   } catch (err) {
     document.getElementById('mainContent').innerHTML = `
       <div class="state-screen">
-        <div style="color:var(--red);font-size:2rem">✕</div>
+        <div style="font-size:2rem">⚠️</div>
         <div>Menuja ei voitu ladata.<br><span style="font-size:0.75rem;color:var(--text-dim)">${err.message}</span></div>
       </div>`;
-    console.error('Failed to load menus.json:', err);
   }
 }
 
