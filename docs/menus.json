@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-03-01",
-  "week_label": "23.–27.2.2026",
+  "scraped_at": "2026-03-02",
+  "week_label": "2.–6.3.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -24,8 +24,7 @@
         "Sydänsalaattia ja raejuustoa (L, G)",
         "Coleslaw (VGN, G)",
         "Kartanon leipää, voita, levitettä ja hummusta",
-        "Kahvi ja tee, lisäksi päivän makea",
-        "Torstaisin aina pannukakkua, hilloa ja kermavaahtoa"
+        "Kahvi ja tee, päivän makea"
       ],
       "daily_menus": {
         "1": {
@@ -95,7 +94,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "23.–27.2.2026",
+      "week_label": "2.–6.3.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
