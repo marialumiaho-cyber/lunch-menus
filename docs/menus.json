@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-03-02",
-  "week_label": "2.–6.3.2026",
+  "scraped_at": "2026-03-09",
+  "week_label": "9.–13.3.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -20,23 +20,25 @@
       ],
       "common_items": [
         "Rapea vihersalaatti, vinaigrettea ja talon salaattikastiketta (VGN, G)",
-        "Pesto rosso-pastasalaatti (VGN)",
-        "Sydänsalaattia ja raejuustoa (L, G)",
-        "Coleslaw (VGN, G)",
+        "Aasialainen sesam-kaali-salaatti (VGN, G)",
+        "Kvinoa-linssisalaatti, kurkkua ja tomaattia (VGN, G)",
+        "Caesar-salaatti naturel (VGN, G)",
         "Kartanon leipää, voita, levitettä ja hummusta",
-        "Kahvi ja tee, päivän makea"
+        "Kahvi ja tee",
+        "Päivän makea",
+        "Torstaisin aina pannukakkua, hilloa ja kermavaahtoa"
       ],
       "daily_menus": {
         "1": {
           "soups": [
-            "Tomaatti-vuohenjuustokeitto (L, G)"
+            "Parsakeitto (L, G)"
           ],
           "mains": [
-            "Pannupihvit sinappi-kermakastikkeessa (L)",
-            "Mäiskyperunat (VGN, G)"
+            "Lihapullat jaloviina-kermakastikkeessa (L)",
+            "Paahdetut perunat (L, G)"
           ],
           "vegan": [
-            "Tofu-kasviswokki (VGN, G)"
+            "Tofu-tikka masala (VGN, G)"
           ]
         },
         "2": {
@@ -44,22 +46,23 @@
             "Kartanon kermainen lohikeitto (L, G)"
           ],
           "mains": [
-            "Aasialainen kanawokki (M, G)",
-            "Nuudelit (VGN, GP)"
+            "Cassoulet naudan ja porsaan lihasta (M, G)",
+            "Keitetyt perunat (VGN, G)"
           ],
           "vegan": [
-            "Tofu-kasviswokki (VGN, G)"
+            "Tofu-tikka masala (VGN, G)"
           ]
         },
         "3": {
           "soups": [
-            "Palsternakkakeitto (VGN, G)"
+            "Savuporo-juustokeitto (L, G)"
           ],
           "mains": [
-            "Jauheliha-mozzarellalasagne (L)"
+            "Kanaa tikka masala (L, G)",
+            "Basmatiriisi (VGN, G)"
           ],
           "vegan": [
-            "Tofu-kasviswokki (VGN, G)"
+            "Tofu-tikka masala (VGN, G)"
           ]
         },
         "4": {
@@ -67,23 +70,23 @@
             "Hernekeitto (M, G) (vegaaninen pyydettäessä)"
           ],
           "mains": [
-            "Teriyakilohta (M, G)",
-            "Basmatiriisi (VGN, G)"
+            "Kauraleivitetyt silakkapihvit, kermaviilikastike (L)",
+            "Perunamuusi (L, G)"
           ],
           "vegan": [
-            "Melanzane (VGN, G)"
+            "Linssi-kikhernecurry (VGN, G)"
           ]
         },
         "5": {
           "soups": [
-            "Kermainen sienikeitto (L, G)"
+            "Borssikeitto (VGN, G)"
           ],
           "mains": [
-            "Porsaan leikkeet, maustevoi (L, G)",
-            "Annanperunat (M, G)"
+            "Porsaan noisetit Dijonsinappikastikkeessa (L, G)",
+            "Kermaperunat (L, G)"
           ],
           "vegan": [
-            "Melanzane (VGN, G)"
+            "Linssi-kikhernecurry (VGN, G)"
           ]
         }
       }
@@ -94,7 +97,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "2.–6.3.2026",
+      "week_label": "9.–13.3.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
@@ -102,62 +105,62 @@
       "daily_menus": {
         "1": {
           "mains": [
-            "1. TOFU MASALA — Tofua, tomaattia, sipulia ja inkivääriä chilli kastikkeessa (G) · €9.20",
-            "2. Malai Kofta — Kasvispyöryköitä joissa cashewpähkinää, tuorejuustoa ja rusinaa tomaatti-kermakastikkeessa (G) · €11.30",
-            "3. Karai chicken — 3.KARAI CHICKEN (G)                                               11,30€\r\nTandoorimarinoituja Kanan Rintapaloja, Kuminan Ja Korianterin Siemeniä, Vihreää Chiliä, Paprikaa, Sipulia Ja Valkosipulia Curry- Ja Kermakastikkeessa (Tulinen) (L,G) · €11.30",
-            "4. Shai lamb — Haudutetut lampaan palat cashew-, curry- ja kookoskermakastikkeessa (L,G) · €12.90",
-            "5. Chilly Rapu — Katkarapuja sipuli-, tomaatti-, paprika-, valkosipuli-, inkivääri- ja soijakastikkeessa (tulinen) (L,G) · €11.30",
-            "6. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta (nro. 1-5) samaan annokseen · €13.90",
-            "7. Butter Kana — Tandoorimarinoituja kanan rintapaloja cashew, tomaatti, voi ja kermakastikkeessa (G) · €12.90",
-            "8. Monday Special — Tandoorimarinoitua kananrintafilettä, jättikatkarapuja, lammasta, sipulia ja vihreää paprikaa (tarjoillaan kuumalla parilalla) (Tandoori mix sizzler) · €15.90"
+            "1. SAAG TOFU — Tofua inkivääri, valkosipuli, tomaatti, chili- ja\r\npinattikastikkeessa (L,G,V) · €9.20",
+            "2. Malai Kofta — Kasvispyöryköitä joissa cashewpähkinää, tuorejuustoa ja\r\nrusinaa tomaatti-kermakastikkeessa (G) · €11.90",
+            "3. CHICKEN KORMA — Kananfilee hunaja, tomaatti ja kermakastikkeessa (L,G) · €11.90",
+            "4. KARAI LAMB — Haudutetut lampaan palat sipuli, korianterin siemen,\r\nkerma, tomaatti, paprika, inkivääri ja\r\nvalkosipulikastikkeessa (keskivahva) (L,G) · €12.90",
+            "5. PRAWN CHILI — Katkarapuja sipuli, tomaatti, paprika, valkosipuli,\r\ninkivääri ja soijakastikkeessa (tulinen) (L,G) · €11.90",
+            "6. BUTTER CHICKEN — Yrtti ja jogurttimarinoitu tandoorissa grillattu\r\nkananfileepala cashew kastikkeessa (L,G) · €12.90",
+            "7. CHEF MIX SPECIAL — Tandoori kanaa, tofua ja katkarapuakanssa paprika,\r\nsipuli, masala ja chilikastikkeella (L,G) · €15.90",
+            "8. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta\r\n(nro. 1-5) samaan annokseen · €13.90"
           ]
         },
         "2": {
           "mains": [
-            "1. MIX VEGETABLE — Papua, parsakaali, kukkakaali, tuorejuusto, herkkusieni, paprika ja sipuli masala ja tomaattikastikkeessa (G) · €9.20",
-            "2. SHAHI PANIR — Tuorejuustoa cashew, tomaatti ja kermakastikkeessa (G) · €11.30",
-            "3. HANDI CHICKEN — Tandoori Marionitu kana palat, korianterin siemenet, vihreä chili ja valkosipuli jogurttikastikkeessa (keskivahva) (G) · €11.30",
-            "4. LAMB KOFTA — Lampaan jauhelihapyöryköitä paprika-, sipuli-, inkivääri-, soija- ja chilikastikkeessa (tulinen) (L,G) · €12.90",
-            "5. CHILLI FISH — Friteeratut pangaisus-fileet, tomatti fenugreek simen pipuri- curry kastikkeessa (L,G) · €11.30",
-            "6. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta (nro. 1-5) samaan annokseen · €13.90",
-            "7. Butter Kana — Tandoorimarinoituja kanan rintapaloja cashew, tomaatti, voi ja kermakastikkeessa (G) · €12.90",
-            "8. TIISTAI / TUESDAY SPECIAL — Yrtti-jogurtissa marinoidut tandoori uunissa paistetut kanafilee palat, paprika, sipuli ja inkivääri herkullisessa kastikkeessa (L,G) · €15.90"
+            "1. ALOO MATAR — Perunoita ja herneitä sipuli-, inkivääri- ja tomaattikastikkeessa kermalla (L,G,V) · €9.20",
+            "2. SHAHI PANIR — Tuorejuustoa cashew, tomaatti ja kermakastikkeessa (G) · €11.90",
+            "3. CHICKEN CHILI — Kanan rintapalat paprika, sipuli, inkivääri, soija ja\r\nchilikastikkeessa (tulinen) (L,G) · €11.90",
+            "4. LAMB KORMA — Lampaan paloja tomaatti, curry ja kermakastikkeessa (L,G) · €12.90",
+            "5. PRAWN PANEER MASALA — Katkarapuja ja tuorejuustoa masalakastikkeessa\r\n(keskivahva) (G) · €11.90",
+            "6. BUTTER CHICKEN — Yrtti ja jogurttimarinoitu tandoorissa grillattu\r\nkananfileepala cashew kastikkeessa (L,G) · €12.90",
+            "7. TANDOORI CHEF SPECIAL — Yrtti ja jogurttimarinoitu tandoorissa grillattu kana,\r\npaprika, sipuli & currykermakastike (L,G) · €15.90",
+            "8. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta\r\n(nro. 1-5) samaan annokseen · €13.90"
           ]
         },
         "3": {
           "mains": [
-            "1. ALU GOBI — Perunaa, kukkakaalia ja tuoretta korianteria sipuli-, inkivääri- ja\r\ntomaattikastikkeessa (keskivahva) (G) · €9.20",
-            "2. KARAI PANEER — Friteerattua tuorejuustoa ja paprikaa tomaatti- ja chilikastikkeessa\r\n(keskivahva) (G) · €11.30",
-            "3. SHAHI CHICKEN — Haudutetut kanapalat cashew-, curry- ja kookos\r\nkermakastikkeessa (L,G) · €11.30",
-            "4. LAMB VINDALO — Haudutetut lampaan palat, peruna ja tomaatti voimakkaasti\r\nmaustetussa chili-, sipuli-, inkivääri-, valkosipuli- ja\r\nvindalookastikkeessa (tulinen) (L,G) · €12.90",
-            "5. FISH KORMA — Friteeratut kalafileen palat cashew-, hunaja- ja\r\nkookoskermakastikkeessa (L,G) · €11.30",
-            "6. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta (nro. 1-5) samaan annokseen · €13.90",
-            "7. CHICKEN — Tandoorimarinoituja kanan rintapaloja cashew, tomaatti, voi ja kermakastikkeessa (L,G) · €12.90",
-            "8. CHICKEN SIZZLER — Tandoorimarinoitua kananrintafilettä, jättikatkarapuja, lammasta, sipulia ja vihreää paprikaa (tarjoillaan kuumalla parilalla) (L,G) · €15.90"
+            "1. GOBI TOFU MASALA — Tofua, kukkakaalia ja tuoretta korianteria sipuli, inkivääri ja tomaattikastikkeessa (L,G,V) · €9.20",
+            "2. SAG KOFTA — Friteerattu kasvis, pähkinä ja Tuorejuustoa pinaatti, tomaatti ja kermakastikkeessa. (L,G) · €11.90",
+            "3. HANDI CHICKEN — Tandoori Marionitu kana palat, korianterin siemenet,\r\nvihreä chili ja valkosipuli jogurttikastikkeessa\r\n(keskivahva) (L,G) · €11.90",
+            "4. LAMB SINKE KEBAB — Jauhettua lampaanlihaa kebab, paprikaa, tomaattia, sipulia ja inkivääriä maustekastikkeessa (L,G) · €12.90",
+            "5. FISH KORMA — Friteeratut kalafileen palat cashew-, hunaja- ja\r\nkookoskermakastikkeessa (L,G) · €11.90",
+            "6. BUTTER CHICKEN — Yrtti ja jogurttimarinoitu tandoorissa grillattu\r\nkananfileepala cashew kastikkeessa (L,G) · €12.90",
+            "7. CHEF SPECIAL — Tandoorimarinoitu kana, lampaanpalat ja\r\njuustokuutiot paprikaa, manteleita ja sipulia cashewkerma kastikkeessa (L,G) · €15.90",
+            "8. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta\r\n(nro. 1-5) samaan annokseen · €13.90"
           ]
         },
         "4": {
           "mains": [
-            "1. ALU CHANA MASALA — Kikherneitä ja peruna valkosipuli, masalakastikkeessa (keskivahva) (G) · €9.20",
-            "2. SAG KOFTA — Kasvispyörykät tuorejuusto-pinaattikermakastikkeessa (L,G) · €11.30",
-            "3. CHICKEN VINDALO — Haudutettuja kanan rintafileen paloja, perunaa ja tomaattia voimakkaasti maustetussa chili-, sipuli-, inkivääri-, valkosipuli- ja vindalookastikkeessa (tulinen) (L,G) · €11.30",
-            "4. KARAI LAMB — Haudutetut lampaan palat sipuli-, korianterin siemen-, kerma-, tomaatti-, paprika-, inkivääri- ja valkosipulikastikkeessa (keskivahva) (L,G) · €12.90",
-            "5. HANDI fish — Friteerattu kalapalat, korianterin siemenet, vihreä chili ja\r\nvalkosipuli jogurttikastikkeessa (keskivahva) (G) · €11.30",
-            "6. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta (nro. 1-5) samaan annokseen · €13.90",
-            "7. Butter Kana — Tandoorimarinoituja kanan rintapaloja cashew, tomaatti, voi ja kermakastikkeessa (L,G) · €12.90",
-            "8. CHICKEN TIKKA MASALA — Yrtti-jogurtissa marinoidut tandoorikanan fileepalat masala-tomaattikastikkeessa (tulinen) (L,G) · €15.90"
+            "1. SAG CHANA — Tofua, kukkakaalia ja tuoretta korianteria sipuli, inkivääri ja tomaattikastikkeessa (L,G,V) · €9.20",
+            "2. VEG KOFTA — Friteerattu kasvisjauhepallo curry ja kermakastikkeessa (L,G) · €11.90",
+            "3. CHICKEN MASALA — Tandoori Marionitu kana palat, korianterin siemenet,\r\nvihreä chili ja valkosipuli jogurttikastikkeessa (keskivahva) (L,G) · €11.90",
+            "4. LAMB CHILI — Lammasta sipuli, tomaatti, paprika, valkosipuli, inkivääri ja\r\nsoijakastikkeessa (tulinen) (L,G) · €12.90",
+            "5. FISH MASLA — Friteerattu pangasius-kalaa valkosipulin ja inkiväärin kanssa masalakastikkeessa (keskivahva) (L,G) · €11.90",
+            "6. BUTTER CHICKEN — Yrtti ja jogurttimarinoitu tandoorissa grillattu\r\nkananfileepala cashew kastikkeessa (L,G) · €12.90",
+            "7. TANDOORI KEBAB SPECIAL — Yrtti ja jogurttimarinoitu tandoorissa grillattu lampaan\r\nkebab inkivääri ja valkosipulikastikkeessa (L,G) · €15.90",
+            "8. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta\r\n(nro. 1-5) samaan annokseen · €13.90"
           ]
         },
         "5": {
           "mains": [
-            "1. GOBI TOFU — Tofua, kukkakaalia ja tuoretta korianteria sipuli, inkivääri ja tomaattikastikkeessa (L,G) · €9.20",
-            "2. PANIR TIKKA MASALA — Yrtti-jogurtissa marinoitu tandoori tuorejuusto, ,sipuli ja tomaatti masala jogurttikastikkeessal. (G) · €11.30",
-            "3. CHICKEN BUTTER MASALA — Tandoorimarinoituja Kanan Rintapaloja Cashew-, Tomaatti-, Voi- Ja\r\nmasalakastikkeessa. (G) · €11.30",
-            "4. HANDI LAMB ( — Lampaan palat, korianterin siemenet, vihreä chili ja valkosipuli jogurttikastikkeessa (keskivahva) (L,G) · €12.90",
-            "5. CHILLY FISH — Friteeratut pangaisus-fileet, tomatti fenugreek simen pipuri- curry kastikkeessa (L,G) · €11.30",
-            "6. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta (nro. 1-5) samaan. · €13.90",
-            "7. Butter Kana — Tandoorimarinoituja kanan rintapaloja cashew, tomaatti, voi ja kermakastikkeessa (G) · €12.90",
-            "8. TANDOORI MIX SIZZLER — Tandoorimarinoituja kanapaloja, lampaan sisäfilettä, paprikaa, sipulia ja tomaattia currykastikkeessa (keskivahva – tarjoillaan kuumalla parilalla) (G) · €15.90",
+            "1. TOFU CHILI — Tofua, sipulia, paprikaa, inkivääriä soija ja chillikastikkeessa (keskivahva) (L,G,V) · €9.20",
+            "2. PALAK PANEER — Tuorejuustoa pinaatti ja kermakastikkeessa (G) · €11.90",
+            "3. CHICKEN BUTTER MASALA — Tandoorimarinoituja kanan rintapaloja cashew,\r\ntomaatti, voi Ja masalakastikkeessa (G) · €11.90",
+            "4. LAMB CURRY — Lammasta tomaatti, sipuli ja currykastikkeessa (L,G) · €12.90",
+            "5. FISH CHILLY — Friteerattu pangasius-kalaa paprikan, sipulin ja inkiväärin\r\nkanssa soija ja chilikastikkeessa (tulinen) (L,G) · €11.90",
+            "6. BUTTER CHICKEN — Yrtti ja jogurttimarinoitu tandoorissa grillattu\r\nkananfileepala cashew kastikkeessa (L,G) · €12.90",
+            "7. VILLA NEPAL SPECIAL — Tandoorimarinoitu kana, lampaanpalat ja\r\njuustokuutiot paprikaa, sipulia ja jogurttikastikkeessa (L,G) · €15.90",
+            "8. MIX THALI — Voit valita kaksi eri ruokalajia yllä olevalta listalta\r\n(nro. 1-5) samaan annokseen · €13.90",
             "Sign In",
             "Add Included Items",
             "0.00€Summa"
