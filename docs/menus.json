@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-03-16",
-  "week_label": "16.–20.3.2026",
+  "scraped_at": "2026-03-23",
+  "week_label": "23.–27.3.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -11,52 +11,55 @@
       "week_label": "",
       "prices": [
         "Lounas 15 €",
-        "Keittolounas 13 €"
+        "Keittolounas 13 €",
+        "Eläkeläiset: lounas 14 €",
+        "Eläkeläiset: keittolounas 12 €",
+        "Take away koko lounas 15 €",
+        "Take away keittolounas 13 €",
+        "Lapset 1–12 vuotta: 1 € / ikävuosi"
       ],
       "common_items": [
         "Rapea vihersalaatti, vinaigrettea ja talon salaattikastiketta (VGN, G)",
-        "Lämminsavulohi-pastasalaatti (M)",
-        "Wakame-nuudelisalaatti (VGN, G)",
-        "Aurinkokuivattu tomaatti-couscoussalaatti (VGN)",
-        "Kartanon leipää, voita, levitettä ja hummusta",
-        "Kahvi ja tee",
-        "Päivän makea"
+        "Linssi-kirsikkatomaattisalaatti, kurkkua, retiisä (VGN, G)",
+        "Saksalainen kirkas perunasalaatti dijon-kastikkeella (VGN, G)",
+        "Waldorfinsalaatti (M, G)",
+        "Kartanon leipää, voita, levitettä ja hummusta"
       ],
       "daily_menus": {
         "1": {
           "soups": [
-            "Paahdettu paprikakeitto (VGN, G)"
+            "Tomaatti-briejuustokeitto (L, G)"
           ],
           "mains": [
-            "Lihamureketta pekoni-kermakastikkeessa (L)",
-            "Perunamuusi (L, G)"
+            "Paistettua kanaa sitruuna-timjamikastikkeessa (M, G)",
+            "Riisi (L, G)"
           ],
           "vegan": [
-            "Butter tofu (VGN, G)"
+            "Tofu-ratatouille (VGN, G)"
           ]
         },
         "2": {
           "soups": [
-            "Kartanon kermainen lohikeitto (L, G)"
+            "Bouillabaisse, rouille (M, G)"
           ],
           "mains": [
-            "Butter chicken (L, G)",
-            "Basmatiriisi (VGN, G)"
+            "Jauhelihapihvit, sipulikermakastike (L, G)",
+            "Perunamuusi (L, G)"
           ],
           "vegan": [
-            "Butter tofu (VGN, G)"
+            "Tofu-ratatouille (VGN, G)"
           ]
         },
         "3": {
           "soups": [
-            "Tomaatti-basilikakeitto (VGN, G)"
+            "Maa-artisokkakeitto (L, G)"
           ],
           "mains": [
-            "Fish & Chips: Paneroitua turskaa, tartarkastike (L)",
-            "Ranskanperunat (VGN, G)"
+            "Porsaan ulkofileetä sienikastikkeessa (L, G)",
+            "Rosmariiniperunat (M, G)"
           ],
           "vegan": [
-            "Butter tofu (VGN, G)"
+            "Tofu-ratatouille (VGN, G)"
           ]
         },
         "4": {
@@ -64,23 +67,23 @@
             "Hernekeitto (M, G) (vegaaninen pyydettäessä)"
           ],
           "mains": [
-            "Kanaa vuohenjuustokastikkeessa (L, G)",
-            "Pastaa (VGN, G)"
+            "Tandoorikanaa (L, G)",
+            "Basmatiriisi (VGN, G)"
           ],
           "vegan": [
-            "Gnocchit, herkkusieni-lehtikaalipaistos (VGN)"
+            "Paprika-kikhernecurry (VGN, G)"
           ]
         },
         "5": {
           "soups": [
-            "Feta-kukkakaalikeitto (L, G)"
+            "Paahdettu juurisellerikeitto (VGN, G)"
           ],
           "mains": [
-            "Porsaan sisäfileetä, punaviinikastike (M, G)",
-            "Juustoperunat (L, G)"
+            "Uunilohta, tartarkastike (M, G)",
+            "Tilliperunat (M, G)"
           ],
           "vegan": [
-            "Gnocchit, herkkusieni-lehtikaalipaistos (VGN)"
+            "Paprika-kikhernecurry (VGN, G)"
           ]
         }
       }
@@ -91,7 +94,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "16.–20.3.2026",
+      "week_label": "23.–27.3.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
