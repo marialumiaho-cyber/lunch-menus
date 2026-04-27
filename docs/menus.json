@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-04-20",
-  "week_label": "20.–24.4.2026",
+  "scraped_at": "2026-04-27",
+  "week_label": "27.4.–1.5.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -19,10 +19,10 @@
         "Lapset 1–12 vuotta: 1 € / ikävuosi"
       ],
       "common_items": [
-        "Rapea vihersalaatti, vinaigrettea ja talon salaattikastiketta (VGN, G)",
-        "Kvinoa-linssisalaatti, kurkkua ja tomaattia (VGN, G)",
-        "Saksalainen kirkas perunasalaatti dijon-kastikkeella (VGN, G)",
-        "Aasialainen sesam-kaalisalaatti (VGN, G)",
+        "Rapea vihersalaatti, vinaigrettea ja talon salaattikastike (VGN,G)",
+        "Linssi-kikhernesalaatti, kurkkua ja tomaattia (VGN,G)",
+        "Coleslaw (VGN,G)",
+        "Aasialainen nuudelisalaatti (VGN,G)",
         "Kartanon leipää, voita, levitettä ja hummusta",
         "Kahvi ja tee, päivän makea",
         "Torstaisin aina pannukakkua, hilloa ja kermavaahtoa"
@@ -30,61 +30,58 @@
       "daily_menus": {
         "1": {
           "soups": [
-            "Tomaatti-vuohenjuustokeitto (L, G)"
+            "Bataatti-inkiväärikeitto (L,G)"
           ],
           "mains": [
-            "Tandoorikanaa (L, G)",
-            "Basmatiriisi (VGN, G)"
+            "Lihapullat kermaisessa tomaattikastikkeessa (L)",
+            "Perunamuusi (L,G)"
           ],
           "vegan": [
-            "Tofu palak paneer (VGN, G)"
+            "Tofu-kasviswokki, nuudeleita (VGN,G)"
           ]
         },
         "2": {
           "soups": [
-            "Kartanon kermainen lohikeitto (L, G)"
+            "Kartanon kermainen lohikeitto (L,G)"
           ],
           "mains": [
-            "Jauheliha-mozzarellalasagne (L)"
+            "Marry me Chicken (L,G)",
+            "Basmatiriisi (VGN,G)"
           ],
           "vegan": [
-            "Tofu palak paneer (VGN, G)"
+            "Tofu-kasviswokki, nuudeleita (VGN,G)"
           ]
         },
         "3": {
           "soups": [
-            "Kermainen sienikeitto (L, G)"
+            "Tomaatti-basilikakeitto (VGN,G)"
           ],
           "mains": [
-            "Uunilohta, tartarkastike (M, G)",
-            "Tilliperunat (VGN, G)"
+            "Porsaan sisäfileetä, punaviinikastike (M,G)",
+            "Kermaperunat (L,G)"
           ],
           "vegan": [
-            "Tofu palak paneer (VGN, G)"
+            "Papucassoulet (VGN,G)"
           ]
         },
         "4": {
           "soups": [
-            "Hernekeitto (M, G) (vegaaninen pyydettäessä)"
+            "Hernekeitto (M,G) (vegaaninen pyydettäessä)"
           ],
           "mains": [
-            "Tortillatorstai: Pulled pork, BBQ-kastiketta, tomaattisalsaa ja smetanaa (L)"
+            "Fish & Chips: Paneroitua turskaa, tartarkastike (M)",
+            "Ranskalaiset perunat (VGN,G)"
           ],
           "vegan": [
-            "Bataatti-kikherne red curry (VGN, G)"
+            "Papucassoulet (VGN,G)"
           ]
         },
         "5": {
-          "soups": [
-            "Paahdettu juurisellerikeitto (M, G)"
-          ],
+          "soups": [],
           "mains": [
-            "Kievin kanaa, aioli",
-            "Sitruunaperunat (VGN, G)"
+            "Vappulounas 59 € – Muista pöytävaraus 🎈"
           ],
-          "vegan": [
-            "Bataatti-kikherne red curry (VGN, G)"
-          ]
+          "vegan": null
         }
       }
     },
@@ -94,7 +91,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "20.–24.4.2026",
+      "week_label": "27.4.–1.5.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
