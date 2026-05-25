@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-18",
-  "week_label": "18.–22.5.2026",
+  "scraped_at": "2026-05-25",
+  "week_label": "25.–29.5.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -21,33 +21,32 @@
       "common_items": [
         "Salaattipöytä",
         "Kahvi ja tee",
-        "Päivän makea",
-        "Torstaisin aina pannukakkua, hilloa ja kermavaahtoa"
+        "Päivän makea"
       ],
       "daily_menus": {
         "1": {
-          "soups": [],
-          "mains": [],
+          "soups": null,
+          "mains": null,
           "vegan": null
         },
         "2": {
-          "soups": [],
-          "mains": [],
+          "soups": null,
+          "mains": null,
           "vegan": null
         },
         "3": {
-          "soups": [],
-          "mains": [],
+          "soups": null,
+          "mains": null,
           "vegan": null
         },
         "4": {
-          "soups": [],
-          "mains": [],
+          "soups": null,
+          "mains": null,
           "vegan": null
         },
         "5": {
-          "soups": [],
-          "mains": [],
+          "soups": null,
+          "mains": null,
           "vegan": null
         }
       }
@@ -58,7 +57,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "18.–22.5.2026",
+      "week_label": "25.–29.5.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
