@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-08-17",
-  "week_label": "17.–21.8.2026",
+  "scraped_at": "2026-08-24",
+  "week_label": "24.–28.8.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -8,10 +8,12 @@
       "address": "Puotilantie 7, 00910 Helsinki",
       "url": "https://www.puotilankartano.fi/ruoka/lounas/",
       "hours": "11:00–14:30",
-      "week_label": "17.8.–21.8.2026",
+      "week_label": "24.-28.8.2026",
       "prices": [
         "Lounas 15 €",
-        "Keittolounas 13 €"
+        "Keittolounas 13 €",
+        "Eläkeläiset: lounas 14 €",
+        "Eläkeläiset: keittolounas 12 €"
       ],
       "common_items": [
         "Salaattipöytä",
@@ -22,62 +24,61 @@
       "daily_menus": {
         "1": {
           "soups": [
-            "Savuporojuustokeitto (L,G)"
+            "Pinaattikeitto, keitetty kananmuna (L, G)"
           ],
           "mains": [
-            "Pannupihvit, pekoni-kermakastike (L)",
-            "Perunamuusi (L,G)"
+            "Lihapullat pippurikastikkeessa (L)",
+            "Timjamiperunat (V, G)"
           ],
           "vegan": [
-            "Papucassoulet (V,G)"
+            "Butter tofu (V, G)"
           ]
         },
         "2": {
           "soups": [
-            "Kartanon lohikeitto (L,G)"
+            "Bouillabaisse, rouille (M, G)"
           ],
           "mains": [
-            "Lyonin kanaa (L,G)",
-            "Riisi (V,G)"
+            "Butter chicken (L, G)",
+            "Basmatiriisi (V, G)"
           ],
           "vegan": [
-            "Papucassoulet (V,G)"
+            "Butter tofu (V, G)"
           ]
         },
         "3": {
           "soups": [
-            "Porkkana-inkiväärikeitto (V,G)"
+            "Palsternakkakeitto (V, G)"
           ],
           "mains": [
-            "Dijonkuorrutettua porsaanfilettä, kapriskastike (L,G)",
-            "Mäiskyperunat (V,G)"
+            "Pyttipannu, tuoremakkaraa, porsaanfilettä ja kananmunaa (M, G)"
           ],
           "vegan": [
-            "Papucassoulet (V,G)"
+            "Butter tofu (V, G)"
           ]
         },
         "4": {
           "soups": [
-            "Hernekeitto (M,G) (vegaaninen pyydettäessä)"
+            "Hernekeitto (M, G) (vegaaninen pyydettäessä)"
           ],
           "mains": [
-            "Tempurapaneroitua turskaa, limeaioli (L)",
-            "Paahdettuja perunoita (V,G)"
+            "Teriyakilohta (L)",
+            "Riisi (V, G)"
           ],
           "vegan": [
-            "Kikherne-kukkakaalicurry (V,G)"
+            "Gnoccheja ja herkkusienipaistosta (V)"
           ]
         },
         "5": {
           "soups": [
-            "Linssi-fenkolikeitto (V,G)"
+            "Parsakeitto (L, G)"
           ],
           "mains": [
-            "BBQ-nyhtöhärkää, tuoretomaattisalsa (M,G)",
-            "Yrttiriisi (V,G)"
+            "Paneroitua kanafilettä, chilimajoneesi (L)",
+            "Paahdetut perunat (V, G)"
           ],
           "vegan": [
-            "Kikherne-kukkakaalicurry (V,G)"
+            "Gnoccheja ja herkkusienipaistosta (V)"
           ]
         }
       }
@@ -88,7 +89,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "17.–21.8.2026",
+      "week_label": "24.–28.8.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
