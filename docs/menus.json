@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-10-19",
-  "week_label": "19.–23.10.2026",
+  "scraped_at": "2026-10-26",
+  "week_label": "26.–30.10.2026",
   "restaurants": [
     {
       "id": "puotilan_kartano",
@@ -8,7 +8,7 @@
       "address": "Puotilantie 7, 00910 Helsinki",
       "url": "https://www.puotilankartano.fi/ruoka/lounas/",
       "hours": "11:00–14:30",
-      "week_label": "19.–23.10.2026",
+      "week_label": "26.–30.10.2026",
       "prices": [],
       "common_items": [],
       "daily_menus": {},
@@ -20,7 +20,7 @@
       "address": "Kauppakartanonkatu 3, 00930 Helsinki",
       "url": "https://restadeal.fi/menu/15/1/lunch?name=Villa%20Nepal%20Helsinki",
       "hours": "10:30–21:00",
-      "week_label": "19.–23.10.2026",
+      "week_label": "26.–30.10.2026",
       "prices": [
         "alkaen 9,20 €"
       ],
